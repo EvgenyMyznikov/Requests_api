@@ -18,7 +18,7 @@ class YaUploader:
         self.file_path = file_path
         with open('Hello world!.txt', 'rb') as f:
             response = requests.put('https://uploader7j.disk.yandex.net:443/upload-target/20201027T123137.939.utd.dzi57s2nkad8i8f907ms8bsug-k7j.21048142', files={"file": f})
-        print(response.status_code)
+        return response.status_code
 
 
 if __name__ == '__main__':
