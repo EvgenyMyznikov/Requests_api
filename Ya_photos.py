@@ -1,4 +1,7 @@
 import requests
+import os
+from tqdm import tqdm
+from pprint import pprint
 
 
 class YaUploader:
@@ -21,11 +24,20 @@ class YaUploader:
             if response.status_code == 201:
                 print('file uploaded successfully!')
 
+    def ya_disk_info(self):
+        url_disk = "https://cloud-api.yandex.net/v1/disk/resources"
+        PARAMS = {'path': '/Photos/', 'fields': '_embedded.items.name,_embedded.items.size'}
+        response = requests.get(url=url_disk, params=PARAMS, headers=self.headers)
+        pprint(response.json())
+
 
 if __name__ == '__main__':
     token = "AgAAAAAz9gVGAAas58LXmOoJAUnZsjQ0wcbhzwM"
-    path = 'w83v8IhfKV8.jpg'
-    file = path
-    uploader = YaUploader(token)
-    upload_url = uploader.get_upload_url(file)
-    result = uploader.upload(upload_url, path)
+    files = os.listdir()
+    for file in tqdm(files):
+        if '.jpg' in file:
+            path = file
+            uploader = YaUploader(token)
+            upload_url = uploader.get_upload_url(file)
+            result = uploader.upload(upload_url, path)
+disk_info = uploader.ya_disk_info()
