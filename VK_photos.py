@@ -3,7 +3,7 @@ import json
 from tqdm import tqdm
 from pprint import pprint
 
-# https://oauth.vk.com/authorize?client_id=7644427&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=photos&response_type=token&v=5.52
+# https://oauth.vk.com/authorize?client_id=.....&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=photos&response_type=token&v=5.52
 
 VK_USER_ID = 41609559
 VK_TOKEN = ''
