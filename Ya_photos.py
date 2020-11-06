@@ -32,7 +32,7 @@ class YaUploader:
 
 
 if __name__ == '__main__':
-    token = "AgAAAAAz9gVGAAas58LXmOoJAUnZsjQ0wcbhzwM"
+    token = "..."
     files = os.listdir()
     for file in tqdm(files):
         if '.jpg' in file:
