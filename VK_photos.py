@@ -3,10 +3,10 @@ import json
 from tqdm import tqdm
 from pprint import pprint
 
-# https://oauth.vk.com/authorize?client_id=7644427&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=photos&response_type=token&v=5.52
+# https://oauth.vk.com/authorize?client_id=.....&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=photos&response_type=token&v=5.52
 
 VK_USER_ID = 41609559
-VK_TOKEN = '3c44e8e48087318f35de046edbeabed86214e6d53d1293187c0322cfd9480aeac38e3c5b0a11eb1c6dd25'
+VK_TOKEN = ''
 
 
 def write_json(data):
